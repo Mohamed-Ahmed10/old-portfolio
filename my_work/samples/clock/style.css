@@ -1,0 +1,138 @@
+body
+{
+		background-color: #2d3436;
+		direction: rtl
+}
+.father
+{
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-ms-border-radius: 50%;
+	margin: 140px auto;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.quarter
+{
+	height: 50%;
+	width: 50%;
+	position: relative;	
+	transform-origin: 50% 50%;
+}
+.quarter2
+{
+	transform: rotate(270deg);
+}
+.quarter3
+{
+	transform: rotate(90deg);
+}
+.quarter4
+{
+	transform: rotate(180deg);
+}
+.number
+{
+	position: absolute;
+	background-color: #FFF;
+	height: 10%;
+	width: 2px;
+	transform-origin: 0% 0%;
+}
+.num1
+{
+	top: 0;
+	left: 0;
+}
+.num2
+{
+    top: 25px;
+    right: 65px;
+    transform: rotate(30deg);
+}
+.num3
+{
+    top: 80px;
+    right: 15px;
+    transform: rotate(60deg);
+}
+.center_point
+{
+	height: 6px;
+	width: 6px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-ms-border-radius: 50%;
+	position: absolute;
+	top: 147px;
+	right: 147px;
+	background: #000;
+	z-index: 4
+}
+.wise
+{
+	position: absolute;
+	bottom: 150px;
+	transform-origin: 50% 100%;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-ms-border-radius: 2px;
+}
+.seconds
+{
+	height: 130px;
+	width: 2px;
+	background-color: #F00;
+	left: 149px;
+	z-index: 3;
+	animation: wise_rotate 60s linear infinite;
+}
+.minutes
+{
+	height: 100px;
+	width: 4px;
+	background-color: #636e72;
+	left: 148px;
+	z-index: 2;
+	animation: wise_rotate 3600s linear infinite;
+}
+.hours
+{
+	height: 70px;
+	width: 4px;
+	background-color: #dfe6e9;
+	left: 148px;
+	z-index: 1;
+	animation: wise_rotate 43200s linear infinite;
+}
+@keyframes wise_rotate
+{
+	0%
+	{
+		
+    	transform: rotate(0deg);
+	}
+	0%
+	{
+    	transform: rotate(-360deg);
+	}
+}
+
+
+
+/*
+ - buttons to set time
+ -local time
+ - color choose
+ -size choose
+*/

@@ -1,0 +1,529 @@
+body
+{
+	box-sizing: border-box;
+	background: #E2E6EA;
+	overflow: hidden;
+}
+section
+{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+h1
+{
+	font-size: 40px;
+    color: #ff4fc0;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+    font-style: italic;
+} 
+/* loading*/
+.loading_overlay
+{
+	background: #222;
+	color: #FFF;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 901;
+}
+.lds-heart 
+{
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  transform: rotate(45deg);
+  transform-origin: 32px 32px;
+  z-index: 1000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.lds-heart div {
+  top: 23px;
+  left: 19px;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: #F00;
+  animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.lds-heart div:after,
+.lds-heart div:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: #F00;
+}
+.lds-heart div:before {
+  left: -17px;
+  border-radius: 50% 0 0 50%;
+}
+.lds-heart div:after {
+  top: -17px;
+  border-radius: 50% 50% 0 0;
+}
+@keyframes lds-heart {
+  0% {
+    transform: scale(0.95);
+  }
+  5% {
+    transform: scale(1.1);
+  }
+  39% {
+    transform: scale(0.85);
+  }
+  45% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+/*loading*/
+/* start navbar*/
+nav
+{
+	background:#0070CD;
+	z-index: 900 !important
+}
+.navbar_transparent
+{
+	background: rgba(27,27,27,.5);
+	border:1px solid #EEE;
+}
+.navbar-brand
+{
+	padding-top: 5px;
+	text-decoration: none;
+}
+.navbar-brand img
+{
+	height: 40px;
+	width: 40px;
+}
+nav h3
+{
+	margin-top: 10px;
+    color: #000;
+    display: inline-block;
+}
+nav h3 a
+{
+	color: #000;
+}
+nav h3 a:hover
+{
+	text-decoration: none;
+	color: #8c7ae6;
+	background: #E2E6EA
+}
+.nav li a
+{
+	width: 170px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	transition: .5s all ease-in-out;
+	font-family: 'Roboto', sans-serif;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	color: #f5f6fa;
+}
+/*end  bavbar*/
+/* start about*/
+.about
+{
+	min-height: 460px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	z-index: 9999;
+}
+.about .container
+{
+	background: #CCC;
+	border-radius: 22px;
+	padding: 20px;
+}
+.about .grades
+{
+	padding: 30px;
+}
+.about img 
+{
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-o-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	max-width: 300px;
+	max-height: 400px;
+}
+.fa-angle-double-right
+{
+	color: #0070CD;
+}
+.about span
+{
+	font-size: 20px;
+}
+/* end about*/
+/* start branches*/
+.branches
+{
+	height: 660px;
+    padding: 50px 0;
+}
+.branches .reserve_container
+{
+	position: relative;
+	perspective: 100px;
+	transition: 1s all ease-in-out	;
+	transform-style: preserve-3d;
+    width: 45%;
+}
+.branches .reserve_container:first-child
+{
+	margin-right: 5%;
+}
+.branches .reserve_container:nth-child(2)
+{
+	margin-right: 5%;
+}
+.branches .reserve_container>div
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 500px;
+	width: 100%;
+	transition: 5s all ease-in-out
+}
+.branches .reserve_container .branch
+{
+	z-index:2;
+	backface-visibility: hidden;
+}
+.branches .reserve_container .branch img
+{
+	height: 100%;
+	width: 100%;
+}
+.branches .reserve_container .branch .overlay
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height:0;
+	width: 100%;
+	background: rgb(105, 195, 196,.5);
+	overflow: hidden;
+	transition: .3s all ease-in-out;
+}
+.branches .reserve_container .branch .overlay h2
+{
+	margin-top: 0px;
+	color: #f6b93b;
+	font-size: 35px;
+    text-shadow: 0px 6px 6px #000;
+}
+.branches .reserve_container .branch .overlay span
+{
+	font-size: 20px;
+}
+.branches .reserve_container .branch .overlay button
+{
+	display: block;
+	margin-top: 10px;
+	margin-left:40%;
+}
+.branches .reserve_container .branch:hover .overlay
+{
+	height: 35%;
+	padding-bottom: 5%;
+} 
+.branches .reserve_container .reserve
+{
+	z-index: 1;
+	background: #EEE;
+	font-family: 'Cairo', sans-serif;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+}
+.branches .reserve_container .reserve i
+{
+	margin-left: 6px;
+}
+.branches .reserve_container .reserve h2
+{
+	margin:0;
+	color: #6c5ce7;
+    font-size: 40px;
+}
+.branches .reserve_container .reserve span
+{
+	display: block;
+	margin-bottom: 10px;
+	font-size: 15px
+}
+.branches .reserve_container .reserve form
+{
+	padding-left: 17%;
+}
+.branches .reserve_container .reserve form>div
+{
+	margin-bottom: 15px;
+	width: 390px;
+    background: #FFF;
+    padding: 1px;
+}
+.branches .reserve_container .reserve input
+{
+	width: 350px;
+    height: 50px;
+    outline: none;
+    border:none;
+    padding-left: 10px;
+    color: #DDD;
+    font-size: 20px;
+}
+.branches .reserve_container .reserve input:focus 
+{
+	border:1px solid #080;
+}
+.branches .reserve_container .reserve input:placeholder
+{
+	color: #DDD
+}
+.branches .reserve_container .reserve form>input/* submit*/
+{
+	transition:  all .3s ease-in-out;
+    background: transparent;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    color: #F7600e;
+    outline: none;
+    cursor: pointer;
+    margin-left: 15px
+}
+.branches .reserve_container .reserve form>input:hover
+{
+	background: #F7600e	;
+	outline: none;
+	color: #FFF
+}
+
+.branches .row .reserve_container .reserve img
+{
+	height: 150px;
+	width: 150px;
+	margin-left: 38%;
+}
+
+/* end branches*/
+/* start questions*/
+.questions
+{
+	min-height: 750px;
+	background: url(../images/questions.jpg) center center fixed no-repeat;
+	background-size: cover;
+	padding: 0;
+	position: relative;
+}
+.questions .overlay
+{
+	background-color: rgba(0, 0, 0,.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%; 
+	padding-bottom: 40px;
+	padding-top: 40px;
+	color: #EEE;
+}
+.questions input,
+.questions textarea,
+.contacts textarea
+{
+	background:rgba(82,78,78,0.7);
+	color: #FFF;
+	border: none;
+}
+.questions .ask {
+	margin: 10px auto;
+}
+.questions textarea
+{
+	width: 550px;
+    height: 170px;
+    resize: none;
+}
+.questions h3
+{
+	font-size: 25px;
+	padding-left: 20px;
+	color: #0984e3;
+	font-family: 'Cairo', sans-serif;
+}
+.questions .panel-title > a
+{
+	text-decoration: none;
+	font-size: 20px;
+}
+.questions .panel-default > .panel-heading
+{
+	background-color: #CCC;
+}
+.questions .panel-body
+{
+	color: #000;
+	background: #bdc3c7;
+}
+/* end questions*/
+/* start feedback*/
+.feedback .container
+{
+	max-height: 300px;
+	max-width: 1000px;
+	overflow-y: scroll;
+	background: #FFF;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	-moz-border-radius: 10px;
+	padding: 30px 0;
+}
+.feedback textarea
+{
+	width: 90%;
+	resize: none;
+	height: 100px;
+	border-radius: 10px;
+	outline: none;
+}
+.feedback h4
+{
+	font-size: 30px;
+}
+.feedback .media-left i
+{
+	font-size: 90px;
+} 
+/* end feedback*/
+/* footer*/
+.contacts
+{
+	min-height: 400px;
+	background:url('../images/footer.jpg') center center fixed no-repeat;
+	background-size: cover;
+}
+.contacts h2
+{
+	color: #FFF;
+	text-shadow: 3px 3px 5px #000;
+	margin-bottom: 30px;
+	font-weight: bold;
+	font-style: italic;
+}
+.contacts .left i
+{
+	margin-right: 20px;
+	transition: .2s all ease-in-out;
+}
+.contacts .fa-facebook-square
+{
+	color: #3b5998;
+}
+.contacts .fa-twitter
+{
+	color: #1da1f2;
+}
+.contacts .fa-facebook-square:hover,
+.contacts .fa-twitter:hover
+{
+	transform: scale(1.2,1.2);
+}
+.contacts textarea
+{
+	padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.5em;
+    border-radius: 6px;
+    resize: none;
+    height: 200px;
+    width: 100%;
+    background: rgba(82,78,78,0.5)
+}
+.contacts input
+{
+	display: block;
+}
+.contacts span
+{
+	display: block;
+	padding-top:20px;
+	font-size: 20px;
+	font-weight: bold;
+}
+.contacts .right input
+{
+	width:50%;
+}
+/* end footer*/
+#scroll_top
+{
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	z-index: 9999;
+	color: #0984e3;
+	display: none;
+	cursor: pointer;
+}
+
+/* start media*/
+@media (max-width: 767px)
+{
+	.about img
+	{
+		margin-left: 30%
+	}
+	.questions
+	{
+	min-height: 1100px;
+	}
+	.questions textarea
+	{
+		width: 100%
+	}
+}
+@media (min-width: 768px) and (max-width: 991px)
+{
+	.questions
+	{
+	min-height: 950px;
+	}
+	.nav li a 
+	{
+	width: 130px;
+	}
+	.about img
+	{
+		margin-left: 30%
+	}
+	.questions textarea
+	{
+		width: 690px
+	}
+}

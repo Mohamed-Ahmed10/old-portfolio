@@ -1,0 +1,16 @@
+- put icon ##
+- in page sale sales direct edit btn to edit  (ar&en) ##
+- footer in all pages    ##
+- login page (ar & en) ##
+- index2 (ar&en) edit ##
+- contact_us_arabi c##
+-privacy_policy_arabic ##
+-cart page ##
+- profile ( and edit it ) ## 
+- edit product   & add new product page (in page sales) ## 
+
+
+
+- messages view page  >>>  message.html
+
+- orders & sales 
